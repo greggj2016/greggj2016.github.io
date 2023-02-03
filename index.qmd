@@ -1,7 +1,57 @@
 ---
 title: "greggj2016.github.io"
+image: John_Gregg_Test.png
+about: 
+    template: jolla
+    image-width: 20em
+    image-shape: round
 ---
 
 This is a Quarto website.
 
+London. Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth, and it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+![Caption](figure3.png)
+
+<!-- #For a demonstration of a line plot on a polar axis, see @fig-polar. -->
+<!-- conda_env <- "C:\\Users\\JohnGregg\\miniconda3\\envs\\STAR_outliers\\python.exe" -->
+<!-- Sys.setenv(RETICULATE_PYTHON = conda_env) -->
+<!-- library(reticulate) -->
+<!-- py_module_available("jupyter") -->
+
+
+---
+title: "John Gregg, PhD Candidate"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.savefig("aaa.png")
+```
+
+<!-- misc crap related to reticulate -->
+<!-- Sys.getenv("RETICULATE_PYTHON") -->
+<!-- py_module_available("numpy") -->
+<!-- conda_list() -->
+<!-- use_python("C:\\Users\\JohnGregg\\miniconda3\\envs\\STAR_outliers\\python.exe") -->
+<!-- use_condaenv("STAR_outliers", required = TRUE) -->
+<!-- py_module_available("jupyter") -->
