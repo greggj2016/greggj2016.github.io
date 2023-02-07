@@ -19,3 +19,30 @@ $primary: #0000d6 !default;
 //$font-family-base: "Georgia", "Gelasio", "Linux Libertine", "Harriet", "Century Supra", //"Chronicle" !default;
 $font-family-base: "Georgia" !default;
 $font-family-code: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace" !default;
+
+/*-- scss:rules --*/
+#quarto-content>* {
+    max-width: 2000px;
+    padding-top: 0px;
+}
+
+#quarto-content {
+    div.quarto-about-jolla {
+            margin-top: 5%;
+    }
+}
+
+body.fullcontent:not(.floating):not(.docked) .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset page-start page-start-inset body-start-outset] 5fr [body-start] 1.5em [body-content-start] 1000px [body-content-end] 1.5em [body-end body-end-outset page-end-inset page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+}
+
+#quarto-content {
+    div.quarto-about-jolla {
+        img.about-image.round {
+            vertical-align: top;
+            margin-right: 0;
+        }
+    }
+}
